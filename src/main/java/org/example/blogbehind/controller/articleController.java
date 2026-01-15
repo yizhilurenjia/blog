@@ -36,5 +36,31 @@ public class articleController
 
     @RequestMapping()
     ResponseMessage Updatearticle(@RequestBody Article article)
-    
+    {
+        return articleService.Updatearticle(article);
+    }
+
+    @RequestMapping()
+    ResponseMessage Deletearticle(int id)
+    {
+        return articleService.Deletearticle(id);
+    }
+
+    @RequestMapping()
+    List<Article> Searcharticle(String title)
+    {
+        return articleService.Searcharticle(title);
+    }
+
+    @RequestMapping()
+    List<Article> Searcharticlebycategory(String category_name)
+    {
+        return articleService.Searcharticlebycategory(category_name);
+    }
+
+    @RequestMapping()
+    List<Article> Searcharticlebyusername(String create_user)
+    {
+        return articleService.Searcharticlebyusername(create_user);
+    }
 }
